@@ -1,6 +1,6 @@
 let notes = JSON.parse(localStorage.getItem('notes'));
 if(!notes){
-    notes = ['Hola, soy una nota', 'Hola, soy una 2da nota'];
+    notes = [];
     localStorage.setItem('notes', JSON.stringify(notes))
 }
 
@@ -25,6 +25,20 @@ noteContent.addEventListener('keyup', ()=>{
     }
 })
 
+const addNote = (event) => {
+    event.preventDefault();
+    const notesLS = JSON.parse(localStorage.getItem('notes'));
+    notesLS.push(noteContent.value);
+    localStorage.setItem('notes', JSON.stringify(notesLS));
 
+    let note = document.createElement('div');
+    note.innerText = noteContent.value;
+    note.classList.add('note-style', 'm-3')
+    let noteContainer = document.querySelector('.corcho');
+    noteContainer.appendChild(note);
+
+    document.querySelector('form').reset();
+    exampleNote.innerText = 'Escriba una nota'
+}
 
 

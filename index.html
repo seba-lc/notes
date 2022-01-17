@@ -26,14 +26,16 @@
           class="col-6 container-box d-flex flex-column align-items-center p-5"
         >
           <h5 class="card-title mt-3">Texto de la nota</h5>
-          <textarea class="mt-3 form-control" id="note-input" cols="50" rows="8"></textarea>
-          <button class="btn btn-success mt-3 p-1">Agregar</button>
+          <form onsubmit="addNote(event)" class="d-flex flex-column align-items-center">
+            <textarea class="mt-3 form-control" id="note-input" cols="50" rows="8"></textarea>
+            <button type="submit" class="btn btn-success mt-3 p-1">Agregar</button>
+          </form>
           <div class="note-style mt-3" id="note-example">Escriba una nota</div>
         </div>
         <div
           class="col-6 container-box d-flex align-items-center justify-content-center"
         >
-          <div class="corcho"></div>
+          <div class="corcho d-flex flex-wrap"></div>
         </div>
       </div>
     </section>
