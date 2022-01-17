@@ -1,3 +1,7 @@
+*{
+    margin: 0 !important;
+    padding: 0 !important;
+}
 .container-box{
     height: 100vh;
 }
@@ -31,4 +35,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
+}
+
+#note-input{
+    width: 400px;
 }

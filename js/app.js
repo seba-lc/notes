@@ -11,3 +11,20 @@ notes.forEach(noteText => {
     let noteContainer = document.querySelector('.corcho');
     noteContainer.appendChild(note);
 })
+
+//patricio
+
+const noteContent = document.getElementById('note-input');
+const exampleNote = document.getElementById('note-example');
+
+noteContent.addEventListener('keyup', ()=>{
+    if(noteContent.value === ''){
+        exampleNote.innerText = 'Escriba una nota'
+    }else{
+        exampleNote.innerText = noteContent.value
+    }
+})
+
+
+
+
